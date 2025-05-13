@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Hikaru Yoshida</title>
+  <style>
+    * {
+    box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* 背景画像を薄くする */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('a.jpg');
+      background-size: 40%;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.4;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 253, 208, 0.6);
+      z-index: -1;
+    }
+
+    header {
+      position: fixed;
+      top: 30px;
+      right: 50px;
+      display: flex;
+      gap: 40px;
+      z-index: 1000;
+    }
+
+    header a {
+      font-size: 20px;
+      font-family: Comic Sans MS;
+      text-decoration: none;
+      color: #4f520fc3;
+      font-weight: bold;
+    }
+
+    .slider {
+      overflow: hidden;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 10%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .slide-track {
+      display: flex;
+      width: calc(300px * 6); /* 画像数 x 2 */
+      animation: scroll 15s linear infinite;
+    }
+
+    .slide {
+      width: 300px;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-900px); } /* 画像3枚分左に移動 */
+    }
+    
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 44px;
+      font-family: Comic Sans MS;
+      color: #333;
+      top: 40%;
+    }
+
+    .first {
+      margin-right: 30px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-family: Comic Sans MS;
+      margin-top: 5px;
+      color: #333;
+    }
+
+    .about {
+      padding: 100px 20px;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 100px 20px;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .ab {
+      text-align: center;
+      font-size: 40px;
+      font-family: Comic Sans MS;
+    }
+
+
+.profile-section {
+  background-color:#fefce887;
+  border-radius: 10px;
+  padding: 40px 30px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.profile-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #4b4b2c;
+  margin-bottom: 30px;
+}
+
+.profile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 2.2;
+}
+
+.profile-list .label {
+  font-weight: bold;
+  color: #666;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.strength-section {
+  background-color: #fefce887;
+  border-radius: 12px;
+  padding: 60px 30px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'BIZ UDGothic', sans-serif;
+  text-align: center;
+}
+
+.strength-subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.strength-keywords {
+  font-size: 28px;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.strength-text {
+  font-size: 18px;
+  line-height: 2;
+  text-align: left;
+  color: #333;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.strength-keywords strong {
+  color: #be123c;
+  font-weight: bold;
+}
+
+.vision-keywords {
+  font-size: 28px;
+  font-weight: bold;
+  color: #374151;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.vision-keywords strong {
+  color: #c1b83b;
+  font-weight: bold;
+  
+}
+
+    p {
+      font-size: 18px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#top">TOP</a>
+    <a href="#about">ABOUT</a>
+    <a href="#strengths">STRENGTHS</a>
+    <a href="#vision">VISION</a>
+  </header>
+
+  <div class="top" id="top">
+    <h1><span class="first">H I K A R U</span> <span class="last">Y O S H I D A</span></h1>
+    <h2>
+      <span>IT</span> 
+      <span>IS</span>
+      <span>A</span>
+      <span>DESIGN</span>
+      <span>PORTFOLIO</span>
+      <span>SITE</span>
+    </h2>
+  </div>
+
+  <div class="about" id="about">
+    <div class="ab">ABOUT</div>
+    <p style="text-align: center; font-size:20px; margin-top: 0%; font-family: BIZ UDGothic; font-weight: bold">私について</p>
+    <!-- スライダーと名前をまとめてラップ -->
+  <div class="slider-wrapper" style="position: relative; max-width: 800px; margin: 0 auto;">
+
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide"><img src="image2.JPG" alt="画像4"></div>
+        <div class="slide"><img src="profile3.jpg" alt="画像3"></div>
+        <div class="slide"><img src="image4.JPG" alt="画像5"></div>
+        <div class="slide"><img src="image2.JPG" alt="画像4"></div>
+        <div class="slide"><img src="profile3.jpg" alt="画像3"></div>
+        <div class="slide"><img src="image4.JPG" alt="画像5"></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="profile-section">
+    <h2>PROFILE</h2>
+    <ul class="profile-list">
+      <li><span class="label">名前：</span>吉田 光 / Hikaru Yoshida</li>
+      <li><span class="label">所属：</span>株式会社福岡情報ビジネスセンター</li>
+      <li><span class="label">生年月日：</span>2004年2月14日（21歳）</li>
+      <li><span class="label">出身地：</span>福岡県柳川市</li>
+      <li><span class="label">趣味：</span>バイク・筋トレ・古着</li>
+      <li><span class="label">特技：</span>サッカー（10年経験）</li>
+      <li><span class="label">出身校：</span>麻生情報ビジネス専門学校</li>
+      <li><span class="label">座右の銘：</span>経験こそが人生を豊かにする</li>
+      
+    </ul>
+  </div>
+  
+    
+  </div>
+
+  <div class="section" id="strengths">
+    <div class="ab">STRENGTHS</div>
+    <p style="text-align: center; font-size: 20px; margin-top: 0%; font-family: BIZ UDGothic; font-weight: bold">強 み</p>
+    <div class="section strength-section">
+    <div class="strength-keywords"><strong>「向上心」</strong>・<strong>「継続力」</strong>・<strong>「忍耐力」</strong></div>
+  
+    <p class="strength-text">
+      私の強みは、目標に向かって粘り強く努力を続ける姿勢です。<br><br>
+      約2年間、週4日ペースで筋トレを継続しており、仕事終わりにも毎日1時間ほど時間を確保して取り組んでいます。<br><br>
+      また、情報分野の学習は専門学校からスタートし、最初は基本情報技術者試験の模擬テストや過去問題の得点がなかなか伸びませんでしたが、何度も繰り返し復習を重ねた結果、自己最高得点で合格することが出来ました。<br><br>
+      自分に負けずコツコツ努力を積み重ねる力には自信があります。
+    </p>
+  </div>
+  
+  
+
+  <div class="section" id="vision">
+    <div class="ab">VISION</div>
+    <p style="text-align: center; font-size: 20px; margin-top: 0%; font-family: BIZ UDGothic; font-weight: bold">将 来</p>
+    <div class="section strength-section">
+        <div class="vision-keywords"><strong>WEBデザイナーになりたい</strong></div>
+      
+        <p class="strength-text">
+          将来は、デザインのアイデアを自分で考え、それを形にしていくWEBデザイナーになりたいと考えています。<br><br>
+          現在は、文字や写真を使った静的なデザイン制作が中心ですが、今後はJavaScriptなどの技術も習得し、動きのある魅力的なサイト制作にも挑戦していきたいと思っています。<br><br>
+          「見た人の記憶に残るデザイン」を目指し、企画からデザイン、コーディングまで一貫して対応できるスキルを身につけることが目標です。
+          </p>
+  </div>
+  </div>
+  </div>  
+
+</body>
+</html>
